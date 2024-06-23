@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Video List</title>
+</head>
+<body>
+<h1>Daftar Video</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Judul</th>
+        <th>URL</th>
+        <th>Channel</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="video : ${videos}">
+        <td th:text="${video.id}"></td>
+        <td th:text="${video.title}"></td>
+        <td th:text="${video.url}"></td>
+        <td th:text="${video.channel}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
